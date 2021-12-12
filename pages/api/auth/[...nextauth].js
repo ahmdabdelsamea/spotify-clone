@@ -18,7 +18,7 @@ const refreshAccessToken = async (token) => {
 	} catch (error) {
 		return {
 			...token,
-			error: 'Refresh Access Token Error',
+			error: 'RefreshAccessTokenError',
 		};
 	}
 };
