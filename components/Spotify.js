@@ -4,6 +4,8 @@ import { shuffle } from 'lodash';
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import { useRecoilValue, useRecoilState } from 'recoil';
 import { playlistIdState, playlistState } from '../atoms/playlistAtom';
+import useSpotify from '../hooks/useSpotify';
+import Songs from '../components/Songs';
 
 const colors = [
 	'from-red-600',
@@ -20,7 +22,8 @@ const colors = [
 	'from-rose-600',
 ];
 
-function Center() {
+function Spotify() {
+	const spotifyApi = useSpotify();
 	const { data: session } = useSession();
 	const [color, setColor] = useState(null);
 	const playlistId = useRecoilValue(playlistIdState);
@@ -30,10 +33,21 @@ function Center() {
 		setColor(shuffle(colors).pop());
 	}, [playlistId]);
 
+	useEffect(() => {
+		spotifyApi
+			.getPlaylist(playlistId)
+			.then((data) => {
+				setPlaylist(data.body);
+			})
+			.catch((err) => {
+				console.log('Something went wrong', err);
+			});
+	}, [spotifyApi, playlistId]);
+
 	return (
 		<div className='flex-grow '>
 			<header className='absolute top-5 right-8'>
-				<div className='flex items-center bg-red-300 space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'>
+				<div className='flex items-center bg-black text-white space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'>
 					<img
 						className='rounded-full w-10 h-10'
 						src={session?.user.image}
@@ -45,13 +59,26 @@ function Center() {
 			</header>
 
 			<section
-				className={`flex items-end space-x-7 bg-gradient-to-b ${color} to-black h-80 padding-8 text-white`}
+				className={`flex items-end space-x-7 bg-gradient-to-b ${color} to-black h-80 p-8 text-white`}
 			>
-				{/* <img src='' alt=''/> */}
-				{/* <h1>Hello World</h1> */}
+				<img
+					className='h-48 w-48 shadow-2xl'
+					src={playlist?.images?.[0]?.url}
+					alt='playlist'
+				/>
+				<div>
+					<p>PLAYLIST</p>
+					<h1 className='text-2xl md:text-3xl xl:text-5xl font-bold'>
+						{playlist?.name}
+					</h1>
+				</div>
 			</section>
+
+			<div>
+				<Songs />
+			</div>
 		</div>
 	);
 }
 
-export default Center;
+export default Spotify;
