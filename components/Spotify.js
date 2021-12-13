@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import { shuffle } from 'lodash';
 import { ChevronDownIcon } from '@heroicons/react/outline';
 import { useRecoilValue, useRecoilState } from 'recoil';
 import { playlistIdState, playlistState } from '../atoms/playlistAtom';
 import useSpotify from '../hooks/useSpotify';
-import Songs from '../components/Songs';
+import Songs from './Songs';
 
 const colors = [
 	'from-red-600',
@@ -38,6 +38,7 @@ function Spotify() {
 			.getPlaylist(playlistId)
 			.then((data) => {
 				setPlaylist(data.body);
+				console.log(data.body);
 			})
 			.catch((err) => {
 				console.log('Something went wrong', err);
@@ -45,9 +46,12 @@ function Spotify() {
 	}, [spotifyApi, playlistId]);
 
 	return (
-		<div className='flex-grow '>
+		<div className='flex-grow h-screen overflow-y-scroll scrollbar-hide'>
 			<header className='absolute top-5 right-8'>
-				<div className='flex items-center bg-black text-white space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'>
+				<div
+					className='flex items-center bg-black text-white space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'
+					onClick={signOut}
+				>
 					<img
 						className='rounded-full w-10 h-10'
 						src={session?.user.image}
@@ -62,7 +66,7 @@ function Spotify() {
 				className={`flex items-end space-x-7 bg-gradient-to-b ${color} to-black h-80 p-8 text-white`}
 			>
 				<img
-					className='h-48 w-48 shadow-2xl'
+					className='h-48 w-48 shadow-2xl '
 					src={playlist?.images?.[0]?.url}
 					alt='playlist'
 				/>

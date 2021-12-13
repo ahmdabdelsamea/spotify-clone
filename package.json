@@ -8,6 +8,7 @@
   "dependencies": {
     "@heroicons/react": "^1.0.5",
     "@svgr/webpack": "^6.1.2",
+    "dominant-color": "^0.0.1",
     "lodash": "^4.17.21",
     "next": "latest",
     "next-auth": "^4.0.5",
