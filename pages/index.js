@@ -3,6 +3,7 @@ import { getSession } from 'next-auth/react';
 
 import Sidebar from '../components/Sidebar';
 import Spotify from '../components/Spotify';
+import Player from '../components/Player';
 
 export default function Home() {
 	return (
@@ -12,7 +13,9 @@ export default function Home() {
 				<Spotify />
 			</main>
 
-			<div>{/* Player */}</div>
+			<div className='sticky bottom-0'>
+				<Player />
+			</div>
 		</div>
 	);
 }
