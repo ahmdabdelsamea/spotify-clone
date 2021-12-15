@@ -1,9 +1,19 @@
-import { getProviders, signIn } from 'next-auth/react';
+import { useEffect } from 'react';
+import { getProviders, signIn, useSession } from 'next-auth/react';
 import Image from 'next/image';
-
+import { useRouter } from 'next/router';
 import SpotifyLogo from '../assets/spotify_logo.svg';
 
 function Login({ providers }) {
+	const router = useRouter();
+	const { data: session, status } = useSession();
+
+	useEffect(() => {
+		if (status === 'authenticated') {
+			router.push('/');
+		}
+	}, [status]);
+
 	return (
 		<div className='flex flex-col items-center justify-center bg-black min-h-screen'>
 			<Image

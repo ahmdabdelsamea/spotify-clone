@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { shuffle } from 'lodash';
-import { ChevronDownIcon } from '@heroicons/react/outline';
+import { LogoutIcon } from '@heroicons/react/outline';
 import { useRecoilValue, useRecoilState } from 'recoil';
 import { playlistIdState, playlistState } from '../atoms/playlistAtom';
 import useSpotify from '../hooks/useSpotify';
@@ -49,7 +49,7 @@ function Spotify() {
 		<div className='flex-grow h-screen overflow-y-scroll scrollbar-hide'>
 			<header className='absolute top-5 right-8'>
 				<div
-					className='flex items-center bg-black text-white space-x-3 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-2'
+					className='flex items-center bg-black text-white space-x-2 opacity-90 hover:opacity-80 cursor-pointer rounded-full p-1 pr-4'
 					onClick={signOut}
 				>
 					<img
@@ -58,7 +58,7 @@ function Spotify() {
 						alt=''
 					/>
 					<h2>{session?.user.name}</h2>
-					<ChevronDownIcon className='h-5 w-5' />
+					<LogoutIcon className='h-5 w-5' />
 				</div>
 			</header>
 
