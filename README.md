@@ -1,19 +1,17 @@
-<h1 align="center">Spotify Clone</h1>
-
-<h2 align="center">Spotify clone built with Next.js and TailwindCSS for learning and practicing purposes.</h2>
+<h1 align="center">[Spotify Clone](https://spotify-clone-kappa-two.vercel.app/login)</h1>
 
 ![Spotify Clone](spotify-clone.png)
 
-## :gear: Instruction
+<h3 align="center">Spotify clone built with Next.js and TailwindCSS for learning and practicing purposes.</h3>
 
-How to use the code?
-
-### Prerequisite
+### Prerequisite :hammer_and_wrench:
 
 Make sure you have these installed
 
 - [Node.js](https://nodejs.org/en/)
 - [git](https://git-scm.com/)
+
+### Instruction :gear:
 
 1. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `git clone https://github.com/ahmdabdelsamea/spotify-clone.git`
 2. CD to the folder `cd spotify-clone`
@@ -22,7 +20,7 @@ Make sure you have these installed
 5. Create a .env file like the provided example.env and fill it with your keys
 6. Run `npm run dev` to run the project at http://localhost:3000
 
-## :rocket: Technologies
+### Technologies :rocket:
 
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
