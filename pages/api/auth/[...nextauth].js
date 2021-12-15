@@ -33,7 +33,7 @@ export default NextAuth({
 	],
 	secret: process.env.JWT_SECRET,
 	pages: {
-		singIn: '/login',
+		singIn: `${process.env.NEXTAUTH_URL}/login`,
 	},
 	callbacks: {
 		async jwt({ token, account, user }) {
