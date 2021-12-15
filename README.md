@@ -1,8 +1,13 @@
-<h1 align="center">[Spotify Clone](https://spotify-clone-kappa-two.vercel.app/login)</h1>
+<h1 align="center"> Spotify Clone </h1>
 
 ![Spotify Clone](spotify-clone.png)
 
 <h3 align="center">Spotify clone built with Next.js and TailwindCSS for learning and practicing purposes.</h3>
+
+### Demo
+
+Make sure you have a real spotify account up and running
+[Spotify Clone](https://spotify-clone-kappa-two.vercel.app/login)
 
 ### Prerequisite :hammer_and_wrench:
 
