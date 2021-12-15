@@ -1,10 +1,12 @@
 <h1 align="center"> Spotify Clone </h1>
 
-![Spotify Clone](spotify-clone.png)
-
 <h3 align="center">Spotify clone built with Next.js and TailwindCSS for learning and practicing purposes.</h3>
 
-### Demo
+![Spotify Clone](spotify-clone.png)
+
+---
+
+### Demo :musical_note:
 
 Make sure you have a real spotify account up and running
 [Spotify Clone](https://spotify-clone-kappa-two.vercel.app/login)
