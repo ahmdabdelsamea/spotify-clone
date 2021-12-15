@@ -1,29 +1,39 @@
-# Spotify Clone
+<h1 align="center">Spotify Clone</h1>
+
+<p align="center">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/w1redl4in/spotify-next" />
+  <img alt="Github last commit" src="https://img.shields.io/github/last-commit/w1redl4in/spotify-next" />
+</p>
+
+<h2 align="center">Spotify clone built with Next.js and TailwindCSS for learning and practicing purposes.</h2>
 
 ![Spotify Clone](spotify-clone.png)
 
-Spotify clone built with Next.js and tailwindcss
+## :gear: Instructions
 
-## Preview
+1. Make sure you have these installed
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+- [Node.js](https://nodejs.org/en/)
+- [git](https://git-scm.com/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+2. Clone this repository into your local machine using the terminal (mac) or Gitbash (PC) `git clone https://github.com/ahmdabdelsamea/spotify-clone.git`
+3. CD to the folder `cd spotify-clone`
+4. Run `npm install` to install the project dependencies
+5. Get your spotify keys from [Spotify Developer](https://developer.spotify.com/)
+6. Create a .env file like the provided example.env and fill it with your keys
+7. Run `npm run dev` to run the project at http://localhost:3000
 
-## Deploy your own
+## :rocket: Technologies
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Next-Auth](https://next-auth.js.org/)
+- [Spotify-API](https://developer.spotify.com/)
+- [spotify-web-api-node](https://github.com/thelinmichael/spotify-web-api-node)
+- [Recoil](https://recoiljs.org/)
+- [Lodash](https://lodash.com/)
+- [tailwindcss](https://tailwindcss.com/)
+- [heroicons](https://heroicons.com/)
+- [Vercel](https://vercel.com/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+> Made with :heart: by Ahmed Abdelsamea _aka BNA_
