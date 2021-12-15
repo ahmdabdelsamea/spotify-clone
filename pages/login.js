@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+
 import Image from 'next/image';
 import { getProviders, signIn, useSession } from 'next-auth/react';
 import SpotifyLogo from '../assets/spotify_logo.svg';
