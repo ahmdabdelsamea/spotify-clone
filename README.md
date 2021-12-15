@@ -1,5 +1,7 @@
 # Spotify Clone
 
+![Spotify Clone](spotify-clone.png)
+
 Spotify clone built with Next.js and tailwindcss
 
 ## Preview
